@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Asteroids</title>
+  <!--base href="https://googledrive.com/host/0B3P0QlX37H41TVUzTGlmdmdLMDQ/" target="_blank"-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script data-main="app" src="lib/require.js"></script>
+
+
+
+
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"-->
+  <link rel="stylesheet" href="lib/essentials/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+  <!--link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"-->
+  <link rel="stylesheet" href="css/Font-Awesome-master/css/font-awesome.min.css">
+  <link href="css/common.css" rel="stylesheet">
+</head>
+<body>
+<!--script type="text/javascript" src="lib/essentials/faye-browser.js"></script-->
+
+<div id="maincontainer" class="container-fluid">
+  <div id="gameViewDiv">
+    <div class="row">
+      <div id="col1" class="col-md-3 col-xs-12" style="text-align:center">
+        <span id="notAuthenticatedSpan"><a href="#" id="login">Login Here</a> <a href="#" id="register">Register Here</a><br></span>
+        <span id="authenticatedSpan">Hello, <span id="username"></span>
+        <a href="#" id="profile"> Profile</a></span>      
+       </div>
+
+      <div id="gameDiv" class="col-md-6 col-xs-12">
+            <div id="scoreboardDiv" class="scoreboard">
+              <a href="#" id="soundlink">
+                <span id="soundlinkicon" class="glyphicon glyphicon-volume-up">      
+                </span>
+              </a>
+            </div>
+            <div id="gameEndDiv">End</div>
+            <canvas id="gameCanvas" style="background-color:black;"></canvas>        
+      </div>
+
+      <div class="col-md-3 col-xs-12" style="text-align:center">
+         <div id="leaderboard">
+              <span id="level"></span> 
+              <span>leader:</span> 
+                <a id="name_href" href="#"></a>
+                <span id="name"></span>, (score: <span id="score">0</span>)         
+         </div><br>
+
+         <button id="restartButton" type="button" class="btn btn-primary btn-sm">Restart</button>
+         <button id="pauseButton" type="button" class="btn btn-primary btn-sm">Pause</button>       
+         <button id="levelButton" type="button" class="btn btn-primary btn-sm">Level</button><br><br>        
+         
+      </div>
+    </div>
+    <div id="controls" class="row">
+      <div class="col-xs-3" style="text-align:center">
+        <div id="arrowsDiv" style="position: relative">
+            <button id="upArrowButton" type="button" class="btn btn-default btn-md" style="background-color:yellow">
+                <span class="glyphicon glyphicon-arrow-up"></span>
+            </button><br><br>
+            <button id="downArrowButton" type="button" class="btn btn-default btn-md" style="background-color:yellow">
+                <span class="glyphicon glyphicon-arrow-down"></span>
+            </button>
+         </div>
+      </div>
+      <div class="col-xs-6" style="text-align:center">      
+      </div>
+      <div class="col-xs-3">
+        <div id="fireButtonDiv" style="position: relative">
+            <button id="fireButton" type="button" class="btn btn-default btn-md" style="color:white; background-color:red">
+                Fire
+            </button>
+         </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<!--script src='https://game-service.herokuapp.com/faye/client.js'></script-->
+</body>
+</html>

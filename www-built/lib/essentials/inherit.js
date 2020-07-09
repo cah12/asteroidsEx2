@@ -1,0 +1,1 @@
+Function.prototype.inheritsFrom=function(e){return e.constructor===Function?(this.prototype=new e,this.prototype.constructor=this,this.prototype.parent=e.prototype):(this.prototype=e,this.prototype.constructor=this,this.prototype.parent=e),this};

@@ -1,0 +1,1 @@
+define(["background"],function(e){var t={},n=function(n,r){if(_.isUndefined(r)||_.isUndefined(r.layers))throw"Parallax: No valid layers array provided";_.each(r.layers,function(r){var i=new e.Moving(n,r);_.isUndefined(r.id)||(t[r.id]=i)}),this.getBackground=function(e){return t[e]}};return n});
